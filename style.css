@@ -34,11 +34,19 @@ body {
     align-items: center;
 }
 
-.homem_foda img{
-    width: 100%;
-    height: auto;
-    margin-bottom: -12px;
-    margin-right: 10px;
+.homem_foda {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homem_foda img {
+    width: 90vw; 
+    max-width: 550px; /* Limite para telas grandes */
+    height: auto; /* Mantém a proporção */
+    margin-bottom: -15px; /* Efeito de sobreposição no container */
+    margin-right: 0; 
 }
 
 .container_login {
@@ -277,9 +285,5 @@ body {
         color: #7F7F7F;
         cursor: pointer;
         z-index: 10;
-    }
-
-    .homem_foda {
-
     }
 }
