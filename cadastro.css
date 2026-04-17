@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -42,16 +40,16 @@ body {
 }
 
 .homem_foda img {
-    width: 90vw; 
+    width: 100vw; 
     max-width: 550px; /* Limite para telas grandes */
     height: auto; /* Mantém a proporção */
-    margin-bottom: -15px; /* Efeito de sobreposição no container */
+    margin-bottom: -16px; /* Efeito de sobreposição no container */
     margin-right: 0; 
 }
 
-.container_login {
+.container_cadastro {
     width: 300px;
-    height: 350px;
+    height: 415px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,8 +60,7 @@ body {
     border-radius: 15px; 
 }
 
-
-.caixa_email, .caixa_senha {
+.caixa_email, .caixa_senha, .caixa_nome {
     display: flex;
     width: 250px;
     height: 45px;
@@ -74,38 +71,45 @@ body {
     border-radius: 10px;
 }
 
-.botao_entrar {
-
-}
-
-.email, .senha, .botao_entrar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-}
-
-.botao_entrar :hover {
-    margin-top: -2px;
-    margin-bottom: 2px;
-    box-shadow: 6px 6px 10px #5f3e8e; 
-    transition: ease 0.3s;   
-}
-
-.botao_entrar :active {
-    margin-top: 2px;
-    margin-bottom: -2px;
-    box-shadow: none ;
-}
-
-.email, .senha {
+.email, .senha, .nome {
     position: relative;
 }
 
-.senha {
-    position: relative; 
-    display: flex;
-    justify-content: center;
+.email_i {
+    position: absolute;
+    top: 17%;
+    left: 12%;
+    font-size: 20px;
+    color: #7F7F7F;
+}
+
+.senha_i {
+    position: absolute;
+    bottom: 60px;
+    top: 12%;
+    left: 12%;
+    font-size: 20px;
+    color: #7F7F7F;
+}
+
+.nome_i {
+    position: absolute;
+    top: 18%;
+    left: 12%;
+    font-size: 20px;
+    color: #7F7F7F;
+}
+
+.caixa_email {
+    margin-bottom: 20px;
+}
+
+.caixa_senha {
+    margin-bottom: 40px;
+}
+
+.caixa_nome {
+    margin-bottom: 20px;
 }
 
 #toggle_olho {
@@ -122,20 +126,32 @@ body {
     color: #000000;
 }
 
-.email :focus, .senha :focus {
+.email :focus, .nome :focus, .senha :focus {
     outline: groove 2px #9855F6;
     transition: ease 0.2s;
 }
 
-.caixa_email {
-    margin-bottom: 20px;
+.email, .senha, .nome, .botao_cadastrar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
-.caixa_senha {
-    margin-bottom: 40px;
+.botao_cadastrar :hover {
+    margin-top: -2px;
+    margin-bottom: 2px;
+    box-shadow: 6px 6px 10px #5f3e8e; 
+    transition: ease 0.3s;   
 }
 
-.entrar {
+.botao_cadastrar :active {
+    margin-top: 2px;
+    margin-bottom: -2px;
+    box-shadow: none ;
+}
+
+.cadastrar {
     width: 250px;
     height: 45px;
     border-radius: 10px;
@@ -160,7 +176,7 @@ body {
     justify-content: center;
 }
 
-.esqueci_senha {
+.possui_conta {
     display: flex;
     color: #47DDAE;
     text-decoration: none;
@@ -169,32 +185,19 @@ body {
     font-size: 15px;
 }
 
-.email_i {
-    position: absolute;
-    top: 17%;
-    left: 12%;
-    font-size: 20px;
-    color: #7F7F7F;
-}
-
-.senha_i {
-    position: absolute;
-    bottom: 60px;
-    top: 12%;
-    left: 12%;
-    font-size: 20px;
-    color: #7F7F7F;
-}
-
 @media screen and (max-width: 748px){
-    .container_login {
-        width: 280px;
-        height: 350px;
+    .container_cadastro {
+        width: 280px; 
+        height: 380px;
     }
 
-    .caixa_email, .caixa_senha {
+    .possui_conta {
+        font-size: 11px;
+    }
+
+    .caixa_email, .caixa_senha, .caixa_nome {
         display: flex;
-        width: 220px;
+        width: 230px;
         height: 45px;
         padding: 7px;
         padding-left: 40px;
@@ -203,18 +206,21 @@ body {
         border-radius: 10px;
     }
 
-    .entrar {
-        width: 220px;
+    .email, .senha, .nome {
+        margin-bottom: -5px;
     }
 
-    .esqueci_senha {
-        font-size: 12px;
+    .cadastrar {
+        width: 230px;
+        margin-top: -5px;
     }
+
+
 
     .email_i {
         position: absolute;
         top: 17%;
-        left: 15%;
+        left: 12%;
         font-size: 20px;
         color: #7F7F7F;
     }
@@ -222,12 +228,19 @@ body {
     .senha_i {
         position: absolute;
         bottom: 60px;
-        top: 12%;
-        left: 14%;
+        top: 13%;
+        left: 12%;
         font-size: 20px;
         color: #7F7F7F;
     }
 
+    .nome_i {
+        position: absolute;
+        top: 18%;
+        left: 12%;
+        font-size: 20px;
+        color: #7F7F7F;
+    }
 
 }
 
@@ -236,12 +249,12 @@ body {
         width: 100%;
     }
 
-    .container_login {
+    .container_cadastro {
         width: 250px;
-        height: 310px;
+        height: 345px;
     }
 
-    .caixa_email, .caixa_senha {
+    .caixa_email, .caixa_senha, .caixa_nome {
         display: flex;
         width: 200px;
         height: 40px;
@@ -252,29 +265,43 @@ body {
         border-radius: 10px;
     }
 
-    .entrar {
+    .cadastrar {
         margin-top: -10px;
         width: 200px;
         height: 40px;
     }
 
-    .esqueci_senha {
+    .possui_conta {
         font-size: 10px;
-        margin-top: 18px;
     }
 
     .logo_gs img{
         width: 100px;
     }
 
-    .botao_entrar :hover {
+    .botao_cadastrar :hover {
         margin-top: -10px;
         margin-bottom: 0px;
         box-shadow: none;    
     }
 
-    .email_i, .senha_i {
+    .email_i, .senha_i, .nome_i {
         font-size: 15px;
+    }
+
+    .email_i {
+        top: 21%;
+        left: 15%;
+    }
+
+    .senha_i {
+        top: 14%;
+        left: 15%;
+    }
+
+    .nome_i {
+        top: 18%;
+        left: 15%;
     }
 
     #toggle_olho {
